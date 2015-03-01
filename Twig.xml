@@ -22,7 +22,16 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  -->
 <templateSet group="Twig">
-    <template name="trn" value="{{ '$START$' | trans }}$END$" description="twig translate" toReformat="true" toShortenFQNames="true">
+    <template name="trn" value="{{ '$START$' | trans }}$END$" description="twig translate" toReformat="true"
+              toShortenFQNames="true">
+        <variable name="START" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="HTML_TEXT" value="true"/>
+            <option name="HTML" value="true"/>
+        </context>
+    </template>
+    <template name="block" value="{% block $START$ %}&#10;$END$&#10;{% endblock %}" description="Create a block"
+              toReformat="true" toShortenFQNames="true">
         <variable name="START" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
             <option name="HTML_TEXT" value="true"/>
