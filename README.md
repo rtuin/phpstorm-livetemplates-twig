@@ -21,6 +21,17 @@ Restart PhpStorm
 
 **Produces:** `{{ '<cursor-ends-here>' | trans }}`
 
+### Block creation
+
+**Alias:** `block`
+
+**Produces:**
+```
+{% block $START$ %}
+$END$
+{% endblock %}
+```
+
 ## Contributing
 Contributions are more than welcome. Issue a pull-request for your contributions.
 
